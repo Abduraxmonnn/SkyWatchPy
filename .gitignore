@@ -1,5 +1,5 @@
 /venv/
 /configs/services
 configs/services
-.env
 .idea
+.env
