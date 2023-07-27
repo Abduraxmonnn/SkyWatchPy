@@ -4,7 +4,7 @@ __pycache__/
 *.py[cod]
 *.pyc
 *.cpy
-.idea
+.idea/
 .venv
 /venv/
 .env
