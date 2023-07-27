@@ -1,5 +1,10 @@
-/venv/
 /configs/services
 configs/services
+__pycache__/
+*.py[cod]
+*.pyc
+*.cpy
 .idea
+.venv
+/venv/
 .env

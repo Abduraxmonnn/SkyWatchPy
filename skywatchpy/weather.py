@@ -23,3 +23,6 @@ class Current(object):
 
     def weather_data(self):
         return self.__request_to_server()['weather']
+
+    def get_city_name(self):
+        return self.city_name
