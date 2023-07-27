@@ -5,6 +5,7 @@ __pycache__/
 *.pyc
 *.cpy
 .idea/
+/.idea/
 .venv
 /venv/
 .env

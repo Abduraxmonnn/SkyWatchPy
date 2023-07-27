@@ -3,7 +3,8 @@ import requests
 
 
 # Project
-from configs.KEYS import API_KEY, API_URL
+from skywatchpy.KEYS import API_KEY, API_URL
+from skywatchpy.countries import countries_name
 
 
 def change_type_number(number_from_to=None):
@@ -30,6 +31,9 @@ class Current(object):
 
     def get_city_name(self):
         return self.city_name
+
+    def get_country_name(self):
+        return countries_name[f"{self.__request_to_server()['sys']['country']}"]
 
     def coordinates(self):
         return self.__request_to_server()['coord']
@@ -76,3 +80,11 @@ class Current(object):
         format_data = change_type_number(format_data)
         return format_data(self.__request_to_server()['wind']['deg'])
 
+    def get_sunrise(self):
+        return self.__request_to_server()['sys']['sunrise']
+
+    def get_sunset(self):
+        return self.__request_to_server()['sys']['sunset']
+
+    def get_timezone(self):
+        return self.__request_to_server()['timezone']
