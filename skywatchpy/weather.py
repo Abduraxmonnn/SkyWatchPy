@@ -65,3 +65,14 @@ class Current(object):
         format_data = change_type_number(format_data)
         return format_data(self.__request_to_server()['visibility'])
 
+    def wind(self):
+        return self.__request_to_server()['wind']
+
+    def get_wind_speed(self, format_data=None):
+        format_data = change_type_number(format_data)
+        return format_data(self.__request_to_server()['wind']['speed'])
+
+    def get_wind_degree(self, format_data=None):
+        format_data = change_type_number(format_data)
+        return format_data(self.__request_to_server()['wind']['deg'])
+
